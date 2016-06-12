@@ -1,15 +1,14 @@
 Karan Desai
 ============
-----
 
->  Karandesai36@gmail.com /973-462-0676 / 1573 3rd Ave New York NY 10128
+>  Karandesai36@gmail.com / 973-462-0676 / 1573 3rd Ave New York NY 10128
 
 ----
 
 **Technical Skills** 
-:   Java - Spring
+:   Java - Spring/EE
 :   Javascript - AngularJS/Ionic/Meteor
-:   HTML CSS
+:   HTML5/CSS
 :   Git/SVN
 :   Swift - iOS 
 
