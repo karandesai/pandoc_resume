@@ -235,18 +235,15 @@ utilitydata.structures.lists.collected={
   },
  },
  {
-  ["metadata"]=5,
-  ["numberdata"]=12,
+  ["metadata"]=8,
   ["references"]={
-   ["block"]="bodypart",
    ["internal"]=10,
+   ["order"]=7,
    ["realpage"]=1,
-   ["reference"]="other-experience",
-   ["section"]=4,
+   ["section"]=3,
   },
   ["titledata"]={
-   ["label"]="subsection",
-   ["title"]="Other Experience",
+   ["title"]="{\\bf Other Experience}",
   },
  },
 }
@@ -258,8 +255,8 @@ utilitydata.structures.pages.collected={
  {
   ["block"]="bodypart",
   ["number"]=1,
-  ["numberdata"]=13,
-  ["prefixdata"]=14,
+  ["numberdata"]=11,
+  ["prefixdata"]=12,
   ["state"]="start",
  },
 }
@@ -374,16 +371,6 @@ utilitydata.job.packed={
    ["hidenumber"]=true,
    ["language"]="en",
    ["numbers"]=9,
-   ["separatorset"]="default",
-   ["set"]="all",
-  },
-  { 0, 0, 1, 3 },
-  {
-   ["block"]="bodypart",
-   ["conversionset"]="default",
-   ["hidenumber"]=true,
-   ["language"]="en",
-   ["numbers"]=11,
    ["separatorset"]="default",
    ["set"]="all",
   },

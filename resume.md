@@ -20,7 +20,7 @@ Experience
 **JP Morgan Chase** 
 :    *Application Developer - Branch Innovation* Feb 2016 - Present
 
-    As a part of the branch innovation team, developed UI for new generations of eATMs and tablets for internal and customer use in Chase branches. Involves working with Javascript and Swift
+    Developed UI for new generations of eATMs and tablets for internal and customer use in Chase branches. Involves working with Javascript and Swift
 
 **JP Morgan Chase** 
 :    *Application Developer - Auto Finance Technology* July 2014 - Feb 2016
@@ -48,15 +48,18 @@ Education
 
 
 
-Other Experience
---------------------
-Sentiment Analysis on Yelp User Reviews – Python
-
-Securing html5 Local Storage  - HTML5 / Javascript				
-
-Distributed Hash Table - File System Based Implementation – c++
-
-Writr - Collaborative story writing app, Android and iOS - Javascript /meteor
-
+<!--Other Experience
+-------------------- -->
 
 ----
+
+**Other Experience** 
+:   Sentiment Analysis on Yelp User Reviews – Python
+:   Securing html5 Local Storage  - HTML5 / Javascript				
+:   Distributed Hash Table - File System Based Implementation – c++
+:   Co-Author of publications on Information Security
+:   Writr - Collaborative story writing app, Android and iOS - Javascript /meteor
+
+----
+
+<!-- ---- -->
