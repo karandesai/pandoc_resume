@@ -1,0 +1,73 @@
+%D \module
+%D   [     file=t-gm
+%D      version=2015.07.31,
+%D        title=\CONTEXT\ User Module,
+%D     subtitle=GraphicsMagick,
+%D       author=Luigi Scarso,
+%D         date=\currentdate,
+%D    copyright=Luigi Scarso,
+%D        email=luigi.scarso@gmail.com,
+%D      license=GNU General Public License]
+
+%C Copyright (C) 2015  Luigi Scarso
+%C
+%C This program is free software: you can redistribute it and/or modify
+%C it under the terms of the GNU General Public License as published by
+%C the Free Software Foundation, either version 3 of the License, or
+%C (at your option) any later version.
+%C
+%C This program is distributed in the hope that it will be useful,
+%C but WITHOUT ANY WARRANTY; without even the implied warranty of
+%C MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%C GNU General Public License for more details.
+%C
+%C You should have received a copy of the GNU General Public License
+%C along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+\writestatus{loading}{ConTeXt User Module / Ghostscript}
+
+\unprotect
+
+\startmodule[gs]
+
+\ctxloadluafile{t-gs}{}
+
+
+
+\define\gsflush{\ctxlua{moduledata.swiglib.ghostscript.Flush()}}
+\define\gsinit{\ctxlua{moduledata.swiglib.ghostscript.Init()}}
+%%\def\gsend{\ctxlua{moduledata.swiglib.ghostscript.End()}}
+\define\gscloseall{\ctxlua{moduledata.swiglib.ghostscript.End()}}
+\define\gsend{}
+\ifdefined\gsrunfile
+  \message{[\noexpand\gsrunfile already defined]}%
+\else
+\def\gsrunfile#1{\ctxlua{moduledata.swiglib.ghostscript.Run_file("#1")}}
+\fi
+\ifdefined\gsarginit
+  \message{[\noexpand\gsarginit already defined]}%
+\else
+\def\gsarginit[#1]{\ctxlua{moduledata.swiglib.ghostscript.Set_arg_init("#1")}}
+\fi
+\define\gsargreset{\gsarginit[t-gs,-dNOPAUSE,-dBATCH,-dQUIET]}
+
+\ifdefined\gsrunonce
+  \message{[\noexpand\gsrunonce already defined]}%
+\else
+\def\gsrunonce[#1]{%
+\gsarginit[#1]%
+\ctxlua{moduledata.swiglib.ghostscript.End()}%
+\gsinit%
+\ctxlua{moduledata.swiglib.ghostscript.End()}%
+\gsargreset%
+\gsinit%
+}
+\fi
+
+\define\gswithbbox{\ctxlua{moduledata.swiglib.ghostscript.CalculateBBox=true}}
+\define\gsnobbox{\ctxlua{moduledata.swiglib.ghostscript.CalculateBBox=false}}
+
+
+\stopmodule
+
+\protect \endinput

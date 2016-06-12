@@ -1,0 +1,10 @@
+** THIS MODULE IS FOR EXPERTS USERS ONLY !! **
+
+This is an experimental module using the swiglib module for Ghostscript for EPS & PS files. 
+You must have the binding for your system installed
+(see http://swiglib.foundry.supelec.fr)
+as well as the helpers module.
+
+The module doesn't work with luajiitex.
+
+CAVEAT EMPTOR: interface is still in flux and can change radically 

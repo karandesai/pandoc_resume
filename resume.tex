@@ -1,0 +1,148 @@
+% Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+% Copyright 2014 Mark Szepieniec <http://github.com/mszep>
+% 
+% ConText style for making a resume with pandoc. Inspired by moderncv.
+% 
+% This CSS document is delivered to you under the CC BY-SA 3.0 License.
+% https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+\startmode[*mkii]
+  \enableregime[utf-8]  
+  \setupcolors[state=start]
+\stopmode
+
+\setupcolor[hex]
+\definecolor[titlegrey][h=757575]
+\definecolor[sectioncolor][h=5581AD]
+\definecolor[rulecolor][h=9DB9D4]
+
+% Enable hyperlinks
+\setupinteraction[state=start, color=sectioncolor]
+
+\setuppapersize [A4][A4]
+\setuplayout    [width=middle, height=middle,
+                 backspace=20mm, cutspace=0mm,
+                 topspace=10mm, bottomspace=20mm,
+                 header=0mm, footer=0mm]
+
+%\setuppagenumbering[location={footer,center}]
+
+\setupbodyfont[11pt, helvetica]
+
+\setupwhitespace[medium]
+
+\setupblackrules[width=35mm, color=rulecolor, height=0.5mm]
+
+\setuphead[chapter]      [style=\tfd]
+\setuphead[section]      [style=\tfd\bf, color=titlegrey, align=middle]
+\setuphead[subsection]   [style=\tfb\bf, color=sectioncolor, align=right,
+                          before={\leavevmode\blackrule\hspace}]
+\setuphead[subsubsection][style=\bf]
+
+\setuphead[chapter, section, subsection, subsubsection][number=no]
+
+%\setupdescriptions[width=10mm]
+
+\definedescription
+  [description]
+  [headstyle=bold, style=normal,
+   location=hanging, width=22mm, distance=14mm, margin=0cm]
+
+\setupitemize[autointro, packed]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
+
+\setuptables[textwidth=max, HL=none]
+
+\setupthinrules[width=19em] % width of horizontal rules
+
+\setupdelimitedtext
+  [blockquote]
+  [before={\setupalign[middle]},
+   indentnext=no,
+  ]
+
+
+\starttext
+
+\section[karan-desai]{Karan Desai}
+
+\thinrule
+
+\startblockquote
+Karandesai36@gmail.com /973-462-0676 / 1573 3rd Ave New York NY 10128
+\stopblockquote
+
+\thinrule
+
+\startdescription{{\bf Technical Skills}}
+  Java - Spring
+
+  Javascript - AngularJS/Ionic/Meteor
+
+  HTML CSS : Git/SVN
+
+  Swift - iOS
+\stopdescription
+
+\thinrule
+
+\subsection[experience]{Experience}
+
+\startdescription{{\bf JP Morgan Chase}}
+  {\em Application Developer - Branch Innovation} Feb 2016 - Present
+
+  As a part of the branch innovation team, developed UI for new
+  generations of eATMs and tablets for internal and customer use in
+  Chase branches. Involves working with Javascript and Swift
+\stopdescription
+
+\startdescription{{\bf JP Morgan Chase}}
+  {\em Application Developer - Auto Finance Technology} July 2014 - Feb
+  2016
+
+  Involved in developing applications and services related to loan
+  originations, processing and decision engines. Involved working with
+  Java for web services and Javascript for front-end web apps.
+\stopdescription
+
+\startdescription{{\bf Internships}}
+  {\em Various positions} May 2012 - May 2013
+
+  Virtual Desktop Engineering intern at JP Morgan Chase , Vulnerability
+  Management intern at UPS , Java Developer intern at UPS
+\stopdescription
+
+\subsection[education]{Education}
+
+\startdescription{2012 - 2014}
+  {\bf Masters of Science, Computer Science} Rutgers University
+
+  {\em Core technical computer science courses covering algorithms,
+  operating system, AI, security and networking}
+\stopdescription
+
+\startdescription{2008 - 2012}
+  {\bf Bachelor of Technology, Information Technology} Vellore Inst of
+  Technology
+
+  {\em Courses consisted of various core computer science fundamentals,
+  programming languages and sofware engineering }
+\stopdescription
+
+\subsection[other-experience]{Other Experience}
+
+Sentiment Analysis on Yelp User Reviews -- Python
+
+Securing html5 Local Storage - HTML5 / Javascript
+
+Distributed Hash Table - File System Based Implementation -- c++
+
+Writr - Collaborative story writing app, Android and iOS - Javascript
+/meteor
+
+\thinrule
+
+\stoptext

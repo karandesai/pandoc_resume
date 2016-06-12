@@ -1,0 +1,122 @@
+%D \module
+%D   [     file=t-gm
+%D      version=2015.07.31,
+%D        title=\CONTEXT\ User Module,
+%D     subtitle=GraphicsMagick,
+%D       author=Luigi Scarso,
+%D         date=\currentdate,
+%D    copyright=Luigi Scarso,
+%D        email=luigi.scarso@gmail.com,
+%D      license=GNU General Public License]
+
+%C Copyright (C) 2015 Luigi Scarso
+%C
+%C This program is free software: you can redistribute it and/or modify
+%C it under the terms of the GNU General Public License as published by
+%C the Free Software Foundation, either version 3 of the License, or
+%C (at your option) any later version.
+%C
+%C This program is distributed in the hope that it will be useful,
+%C but WITHOUT ANY WARRANTY; without even the implied warranty of
+%C MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%C GNU General Public License for more details.
+%C
+%C You should have received a copy of the GNU General Public License
+%C along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+\writestatus{loading}{ConTeXt User Module / GraphicsMagick}
+
+\unprotect
+
+\startmodule[gm]
+
+\ctxloadluafile{t-gm}{}
+
+
+\ifdefined\gminit
+  \message{[\noexpand\gminit already defined]}%
+\else
+\def\gminit#1{\cldcontext{moduledata.swiglib.graphicsmagick.init("#1")}}
+\fi
+
+\ifdefined\gmopenimage
+  \message{[\noexpand\gmopenimage already defined]}%
+\else
+\def\gmopenimage#1{\cldcontext{moduledata.swiglib.graphicsmagick.openimage("#1")}}
+\fi
+
+\ifdefined\gmregisterimage
+  \message{[\noexpand\gmregisterimage already defined]}%
+\else
+\def\gmregisterimage#1{\cldcontext{moduledata.swiglib.graphicsmagick.register("#1")}}
+\fi
+
+\ifdefined\gmgetimage
+  \message{[\noexpand\gmgetimage already defined]}%
+\else
+\def\gmgetimage#1{\cldcontext{moduledata.swiglib.graphicsmagick.getimage([[#1]])}}
+\fi
+
+\ifdefined\gmselectimage
+  \message{[\noexpand\gmselectimage already defined]}%
+\else
+\def\gmselectimage#1#2{%
+\startluacode
+  local gm   = moduledata.swiglib.graphicsmagick
+  local report_state = gm.report_state
+  if not(gm.Images['#1']) then 
+    report_state("error: gmselectimage called with unknown ".. "#1" ) 
+    return false
+  end
+  local wand = gm.Images['#1'].wand
+  if not(wand) then
+    report_state("error: gmselectimage called with  ".. "#1" .. " has a nil wand") 
+    return false
+  end
+  local img  = tonumber(#2) 
+  if img>gm.Images['#1'].images() then 
+     report_state("error: gmselectimage called with  second parameter ".. img .. ", images has only ".. gm.Images['#1'].images().. " images. Selected last image." )
+     return false
+  end
+  if img<1 then 
+     report_state("error: gmselectimage called with  second parameter ".. img .. ", selected first image." )
+     return false 
+  end
+  gm.MagickResetIterator(wand)
+  for i=1,img do 
+     gm.MagickNextImage(wand)
+  end
+  local _wand = gm.MagickGetImage( wand )
+  gm.DestroyMagickWand(wand)
+  wand = _wand  
+  gm.updateinfo(wand,'#1')
+  return true 
+\stopluacode}
+\fi
+
+
+%% \def\gmclose{%
+%% \startluacode
+%% local gm           = moduledata.swiglib.graphicsmagick
+%% local report_state = gm.report_state
+%% report_state("closing all" ) 
+%% gm.destroy()
+%% \stopluacode
+%% }
+\define\gmclose\relax
+
+\ifdefined\gmloadimage
+  \message{[\noexpand\gmloadimage already defined]}%
+\else
+\def\gmloadimage#1{\gmopenimage{#1}\gmregisterimage{#1}}
+\fi
+
+
+
+%% See t-gm.lua
+%\appendtoks\gmclose\to\everystoptext%
+
+\stopmodule
+
+\protect \endinput
+

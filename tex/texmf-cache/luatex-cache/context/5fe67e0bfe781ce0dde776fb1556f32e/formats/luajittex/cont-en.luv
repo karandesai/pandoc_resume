@@ -1,0 +1,6 @@
+return {
+ ["enginebanner"]="This is LuajitTeX, Version 0.95.0 (TeX Live 2016)",
+ ["formatbanner"]="2016.06.10 23:51",
+ ["sourcefile"]="context.mkiv",
+ ["sourcehash"]="fb51e7f47c20e94104865fed90d2b985",
+}
