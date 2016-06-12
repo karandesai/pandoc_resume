@@ -53,7 +53,7 @@ Education
 
 ----
 
-**Other Experience** 
+**Other** 
 :   Sentiment Analysis on Yelp User Reviews – Python
 :   Securing html5 Local Storage  - HTML5 / Javascript				
 :   Distributed Hash Table - File System Based Implementation – c++
