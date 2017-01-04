@@ -1,6 +1,7 @@
 KARAN R DESAI
----------
-> **karandesai36@gmail.com/973-462-0676/1573 3rd Ave New York NY 10128**
+==========
+
+**Karandesai36@gmail.com/973-462-0676/1573 3rd Ave New York NY 10128**
 
 ----
 
@@ -9,7 +10,7 @@ Experience
 
 **JP Morgan Chase**
 
-**Application Developer :  Branch Innovation**    *Feb 2016 - Present*
+**Application Developer, Associate :  Branch Innovations**    *Feb 2016 - Present*
 
 Developed User Interface for new generations of eATMs and tablets for internal use and customer use in Chase branches. Developed rich UI using internal javascript libraries similar to angular JS and Swift for native components. Worked with iOS and Android tablets. Product is now in use at pilot branches. I lead the development for the iOS part of the project seeing the project through all the phases of the Agile development process.
 
@@ -19,15 +20,13 @@ Developed User Interface for new generations of eATMs and tablets for internal u
 
 Involved in developing applications and services catered to the Auto Finance business within Chase including loan originations, processing and decision engines. Involved working with Java CXF type web services to create various api's used by Chase.com for customer profiles, vehicle search and valuations, customer credit reports, dealer search etc. Worked with FICO's rules engine. Used Javascript (requireJS, reactJS, canJS) for front-end web apps supporting the same loan originations process. 
 
-**Various positions** *May 2012 - May 2013*
+**JP Morgan Chase**
 
-**Virtual Desktop Engineering Intern at JP Morgan Chase** -  Worked with the core development team for the virtual desktop environment and created orchestration tools for the vast virtual desktop environment at JPMC including metrics like performance, health, user sessions etc using Java.
+**Technology Analyst Program: Virtual Desktop Engineering** *May 2013 - Sept 2013* -  Worked with the core development team for the virtual desktop environment to create orchestration and central management tools for the vast infrastructure at JPMC including metrics like performance, health, user sessions etc using Java. Also worked on ActiveMQ, ESB, SQL  
 
-**Vulnerability Management intern at UPS** - Manual and automated security penetration tester for web services that supported the prime website. Included understanding web services and various tools used for penetration testing
+**United Parcel Service** 
 
-**Java Developer Intern at UPS** - Worked with apache camel to develope underlying messaging services in MQ to support the core product that relays basic messaging for UPS's parcel delivery technology.
-
-
+**Developer Co-Op  : Vulnerability Management and Messaging Services** *May 2012 - April 2013* - Manual and automated security penetration tester for web services that supported the prime website. Included understanding web services and various tools used for penetration testing. Worked with apache camel to develope underlying messaging services in MQ to support the core product that relays basic messaging for UPS's parcel delivery technology.
 
 
 ----
